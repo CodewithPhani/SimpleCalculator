@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #252542);
+}
+
+.calculator-container {
+    width: 360px;
+    background-color: #0f0f1a;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-screen {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    text-align: right;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    min-height: 24px;
+}
+
+.current-operand {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    height: 64px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.number {
+    background-color: #232338;
+    color: #ffffff;
+}
+
+.btn.number:hover {
+    background-color: #31314f;
+}
+
+.btn.operator.secondary {
+    background-color: #3d3d5c;
+    color: #a5a5c7;
+    border-radius: 18px;
+}
+
+.btn.operator.secondary:hover {
+    background-color: #4e4e75;
+    color: #fff;
+}
+
+.btn.operator.primary {
+    background-color: #ff9f0a;
+    color: #ffffff;
+}
+
+.btn.operator.primary:hover {
+    background-color: #ffb547;
+}
+
+.btn.equals {
+    background-color: #2ec4b6;
+    color: #ffffff;
+    border-radius: 18px;
+}
+
+.btn.equals:hover {
+    background-color: #46ded0;
+}
+
+.zero-btn {
+    grid-column: span 2;
+    border-radius: 18px;
+}
+
+.btn:active {
+    transform: scale(0.92);
+}
