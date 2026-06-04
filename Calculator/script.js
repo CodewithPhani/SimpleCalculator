@@ -71,8 +71,6 @@ class Calculator {
             default:
                 return;
         }
-
-        // Handle floating point precision anomalies (e.g., 0.1 + 0.2)
         this.currentOperand = parseFloat(computation.toFixed(8)).toString();
         this.operation = undefined;
         this.previousOperand = '';
@@ -88,7 +86,6 @@ class Calculator {
     }
 }
 
-// Target UI element nodes
 const previousOperandTextElement = document.getElementById('previous-operand');
 const currentOperandTextElement = document.getElementById('current-operand');
 const numberButtons = document.querySelectorAll('[data-number]');
@@ -99,7 +96,6 @@ const equalsButton = document.querySelector('[data-action="equals"]');
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
-// UI Event Binding Mapping
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.getAttribute('data-number'));
